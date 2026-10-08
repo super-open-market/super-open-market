@@ -1,0 +1,54 @@
+{
+  "name": "super-open-market",
+  "version": "0.1.0",
+  "description": "DoorDash restaurant & grocery data for AI agents and the terminal: CLI + MCP server powered by the DoorDash API on RapidAPI.",
+  "keywords": [
+    "doordash",
+    "doordash-api",
+    "rapidapi",
+    "mcp",
+    "mcp-server",
+    "food-delivery",
+    "grocery",
+    "ai-agents",
+    "cli"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/super-open-market/super-open-market.git"
+  },
+  "homepage": "https://github.com/super-open-market/super-open-market#readme",
+  "bin": {
+    "super-open-market": "dist/cli/index.js",
+    "som": "dist/cli/index.js"
+  },
+  "files": [
+    "dist",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/cli/index.ts",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test:live": "SOM_LIVE=1 vitest run test/live.test.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "commander": "^15.0.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}
